@@ -86,32 +86,32 @@ def Task4():
     print(strResult)
 
 
-def fibPlus(k):
+def FibPlus(k):
     if k == 0:
         return 0
     elif k in [1, 2]:
         return 1
     else:
-        return fibPlus(k-1) + fibPlus(k-2)
+        return FibPlus(k-1) + FibPlus(k-2)
 
 
-def fibMinus(k):
+def FibMinus(k):
     if k == -1:
         return 1
     elif k == -2:
         return -1
     else:
-        return fibMinus(k+2) - fibMinus(k+1)
+        return FibMinus(k+2) - FibMinus(k+1)
 
 
 def Task5():
     k = int(input('Введите число = '))
     lst = []
     for i in range(-k, 0):
-        lst.append(fibMinus(i))
+        lst.append(FibMinus(i))
 
     for i in range(0, k+1):
-        lst.append(fibPlus(i))
+        lst.append(FibPlus(i))
     print(lst)
 
 
