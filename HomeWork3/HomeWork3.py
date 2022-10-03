@@ -1,11 +1,12 @@
 
 from random import randrange
+
+
 def PrintTask():
     print('1. Задайте список из нескольких чисел. Напишите программу, которая найдёт сумму элементов списка, стоящих на нечётной позиции.')
     print('2. Напишите программу, которая найдёт произведение пар чисел списка. Парой считаем первый и последний элемент, второй и предпоследний и т.д.')
     print('3. Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.')
-    print(
-        '4. Напишите программу, которая будет преобразовывать десятичное число в двоичное.')
+    print('4. Напишите программу, которая будет преобразовывать десятичное число в двоичное.')
     print('5. Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.')
     print('0. Выход')
 
@@ -57,7 +58,7 @@ def Task3():
     min = 1
     max = -1
 
-    for i in range(1, n):
+    for i in range(n):
         if lst[i] % 1 == 0:
             continue
         else:
@@ -75,12 +76,12 @@ def Task4():
     while n / 2 != 0 and n / 2 != 1:
         strResult = str(n % 2) + strResult
         n = int(n / 2)
-    
+
     if int(n / 2) == 0:
         if int(n % 2) == 1:
             strResult = str(int(n % 2)) + strResult
     else:
-        strResult = str(int(n / 2)) + str(int(n % 2))+ strResult
+        strResult = str(int(n / 2)) + str(int(n % 2)) + strResult
 
     print(strResult)
 
@@ -92,6 +93,7 @@ def fibPlus(k):
         return 1
     else:
         return fibPlus(k-1) + fibPlus(k-2)
+
 
 def fibMinus(k):
     if k == -1:
@@ -111,6 +113,7 @@ def Task5():
     for i in range(0, k+1):
         lst.append(fibPlus(i))
     print(lst)
+
 
 PrintTask()
 TaskNumber = int(input('Введите номер задачи '))
